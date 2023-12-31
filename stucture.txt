@@ -1,0 +1,51 @@
+my-nodejs-app/
+|-- config/
+|   |-- config.js
+|-- controllers/
+|   |-- mainController.js
+|-- models/
+|   |-- mainModel.js
+|-- public/
+|   |-- css/
+|   |-- js/
+|   |-- images/
+|-- routes/
+|   |-- mainRoutes.js
+|-- utils/
+|   |-- helperFunctions.js
+|-- views/
+|   |-- layouts/
+|   |   |-- mainLayout.ejs
+|   |-- partials/
+|   |   |-- header.ejs
+|   |   |-- footer.ejs
+|   |-- mainView.ejs
+|-- app.js
+|-- package.json
+|-- .gitignore
+|-- README.md
+
+
+
+//   --- Not important ↓↓↓↓
+config/: Puedes almacenar configuraciones específicas de la aplicación en este directorio, como configuraciones de base de datos, configuraciones de servidor, etc.
+
+controllers/: Almacena los controladores de la aplicación que manejan la lógica de la aplicación.
+
+models/: Contiene los modelos que representan la estructura de datos y la lógica de negocio.
+
+public/: Directorio público que contiene archivos estáticos como hojas de estilo, scripts y imágenes. Este directorio se puede servir de manera estática con Express.
+
+routes/: Contiene archivos de enrutamiento que conectan las solicitudes HTTP con los controladores.
+
+utils/: Puedes almacenar funciones de utilidad o helpers aquí.
+
+views/: Contiene las vistas de la aplicación. Se organiza en subdirectorios como layouts/ y partials/ para mantener la estructura de las vistas más modular.
+
+app.js: El punto de entrada de tu aplicación.
+
+package.json: El archivo que contiene la información de tu proyecto, incluyendo las dependencias y los scripts de inicio.
+
+.gitignore: El archivo que especifica qué archivos y carpetas no deben ser rastreados por Git. Por lo general, node_modules/ y archivos generados se incluyen aquí.
+
+README.md: La documentación de tu proyecto.

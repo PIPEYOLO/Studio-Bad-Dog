@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Studio Bad Dog</title>
+
+    <!--Google Fonts- tipography-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+
+
+    <!--Boostrap Stylesheet-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!--Boostrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    
+    <!--My Styles-->
+    <link rel="stylesheet" href="/public/common-resources/styles.css" type="text/css">
+    <link rel="stylesheet" href="/public/Sites/styles.css" type="text/css">
+
+    <!--Icon-->
+    <link rel="icon" href="/public/img/favicon.png">
+
+</head>
+  <body >
+
+    <!-- <h1>Hello, world!</h1> -->
+    <nav class="nav container-fluid position-sticky top-0 row w-100 h-auto p-1 m-0">
+        <div class="col-5 h-nav m-0 d-flex justify-content-center">
+            <a class="h-100 flex-shrink-0 w-auto m-0 border-0" href="/home">
+                <img class="object-fit-contain h-100 w-100" src="/public/img/bad-dog-studio-logo.png">
+            </a>
+        </div>
+        <div class="col-1 offset-5 h-nav p-0 d-flex justify-content-center d-lg-none" id="nav__show_other_opts_button">
+            <button class="nav-tasks-button button h-nav  p-0 border-0">
+                <svg class="object-fit-cover" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list-task" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5zM3 3H2v1h1z" fill="rgb(217, 0, 98)"/>
+                    <path d="M5 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M5.5 7a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 4a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1z" fill="rgb(217, 0, 98)"/>
+                    <path fill-rule="evenodd" d="M1.5 7a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5zM2 7h1v1H2zm0 3.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm1 .5H2v1h1z" fill="rgb(217, 0, 98)"/>
+                </svg>                
+            </button>
+        </div>
+        <ul class="col-12 col-lg-5 offset-lg-1 collapse_other_opts h-lg-100 mb-0 row justify-content-evenly ps-3 pt-2 p-lg-0" id="nav__other_opts">
+            <li class="col-12 col-lg-2 d-block ps-2 pe-0 px-lg-0 d-block py-1 position-relative">
+                <a class="bg-transparent d-lg-block" id="show_services">Sites</a>
+                <!-- <input id="focus_helper_for_ul_select_services" class="cursor-pointer position-absolute w-100 d-block opacity-0" style="transform: translateY(-100%);"> -->
+                <ul class="bg-transparent rounded-2 d-none position-absolute list-unstyled bg-white border" id="ul_select_services">
+                    <li class="p-0 fw-semi-bold bg-white m-0  p-1 flex-grow-1">
+                        <a href="/sites#" class="redirect_to_sites nav_anchor">
+                            Last Proyects
+                        </a>
+                    </li>
+                    <li class="p-0 fw-semi-bold bg-white m-0  p-1 flex-grow-1">
+                        <a href="/sites#single-page" class="redirect_to_sites nav_anchor">
+                            SinglePage
+                        </a>
+                    </li>
+                    <li class="p-0 fw-semi-bold bg-white m-0 p-1 flex-grow-1 w-100">
+                        <a href="/sites#multi-page" class="redirect_to_sites nav_anchor">
+                            MultiPage
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="col-12 col-lg-2 d-block ps-2 pe-0 px-lg-0 d-block py-1">
+                <a href="/clients" class="nav_anchor">
+                    Clients
+                </a>
+                </li>
+            <li class="col-12 col-lg-2 d-block ps-2 pe-0 px-lg-0 d-block py-1">
+                <a href="/start-now" class="nav_anchor">
+                    Start-now
+                </a>
+                </li>
+            <li class="col-12 col-lg-2 d-block ps-2 pe-0 px-lg-0 d-block py-1">
+                <a href="/intrested" class="nav_anchor">
+                    Intrested?
+                </a>
+                </li>
+        </ul>
+        
+
+    </nav>
+
+
+    <main class="h-auto w-100 bg-gradient-main c-white p-2  p-lg-4">
+        <section class="container-lg row h-auto m-auto justify-content-center my-4">
+            <article class="col-12 col-md-10 col-lg-5">
+                <h2 class="fs-2">Do you need an incredible site?</h2>
+                <p class="fs-6">A beautiful, modern, responsive and personalized site for your campaign, business, brand, service or product</p>
+                <a class="btn bg-btn c-white p-2 px-3 rounded-2 fs-6 fw-semibold text-decoration-none" href="#services">Yes, get started</a>
+            </article>
+            <article class="container-fluid row col-10 col-md-8 col-lg-7 flex-shrink-0">
+                <img class="object-fit-contain w-100 h-100 col-12" src="public\img\header-image.png">
+            </article>
+        </section>
+
+        <section class="container-lg row h-auto m-auto justify-content-center my-4">
+            <article class="col-12 col-md-10 col-lg-5">
+                <h2 class="fs-2">Responsive Web Sites</h2>
+                <p class="fs-6">It is important to provide your visitor with an optimum web exprerience in movile devices. Responsive web design means that your website adapts instantly to  the divice that the
+                    visitor uses. My work is to do, that the visit of your users be the most plesant ant intuitive for them.
+                </p>
+            </article>
+            <article class="container-fluid row col-10 col-md-8 col-lg-7 flex-shrink-0 order-lg-first">
+                <img class="object-fit-contain w-100 h-100 col-12" src="public\img\header-image-2.png">
+            </article>
+        </section>
+
+        <section class="container row justify-content-center justify-content-md-center my-5 mx-auto p-0" id="services">
+            <div class=" col-12 col-sm-6 col-xl-3 p-0 my-2 d-flex">
+                <div class="card position-static container p-0 border-0 rounded-2 mx-auto" style="width: 15rem; height: 22rem;">
+                <!-- <div class="container-fluid h-60">
+                </div> -->
+                    <img src="public\img\icon-sites.png" class="card-img-top h-60 w-100 rounded-top-2 bg-dark" alt="...">
+
+                    <div class="card-body">
+                    <h5 class="card-title fw-semibold">New Website</h5>
+                    <p class="card-text mb-2 small">Do you need a new website 100% responsive?</p>
+                    <a href="sites#" class="text-decoration-none" style="color:var(--first-color)">More details<i class="bi bi-caret-right-fill m-auto"></i></a>
+                  
+                    </div>
+                </div>
+            </div>
+
+            <div class=" col-12 col-sm-6 col-xl-3 p-0 my-2 d-flex">
+                <div class="card position-static container p-0 border-0 rounded-2 mx-auto" style="width: 15rem; height: 22rem;">
+                <!-- <div class="container-fluid h-60">
+                </div> -->
+                    <img src="public\img\icon-clients.png" class="card-img-top h-60 w-100 rounded-top-2 bg-dark" alt="...">
+
+                    <div class="card-body">
+                    <h5 class="card-title fw-semibold">Clients</h5>
+                    <p class="card-text mb-2 small">Happy clients and beautiful proyects</p>
+                    <a href="/clients#" class="text-decoration-none" style="color:var(--first-color)">More details<i class="bi bi-caret-right-fill m-auto"></i></a>
+                  
+                    </div>
+                </div>
+            </div>
+
+
+            <div class=" col-12 col-sm-6 col-xl-3 p-0 my-2 d-flex">
+                <div class="card position-static container p-0 border-0 rounded-2 mx-auto" style="width: 15rem; height: 22rem;">
+                <!-- <div class="container-fluid h-60">
+                </div> -->
+                    <img src="public\img\icon-workflow.png" class="card-img-top h-60 w-100 rounded-top-2 bg-dark" alt="...">
+
+                    <div class="card-body">
+                    <h5 class="card-title fw-semibold">Work Flow</h5>
+                    <p class="card-text mb-2 small">Listening to all yout needs. Lets discuss your proyect</p>
+                    <a href="/start-now#" class="text-decoration-none" style="color:var(--first-color)">More details<i class="bi bi-caret-right-fill m-auto"></i></a>
+                  
+                    </div>
+                </div>
+            </div>
+
+            <div class=" col-12 col-sm-6 col-xl-3 p-0 my-2 d-flex">
+                <div class="card position-static container p-0 border-0 rounded-2 mx-auto" style="width: 15rem; height: 22rem;">
+                <!-- <div class="container-fluid h-60">
+                </div> -->
+                    <img src="public\img\icon-about.png" class="card-img-top h-60 w-100 rounded-top-2 bg-dark" alt="...">
+
+                    <div class="card-body">
+                    <h5 class="card-title fw-semibold">Intrested?</h5>
+                    <p class="card-text mb-2 small">Lets start with yout new proyect</p>
+                    <a href="/intrested#" class="text-decoration-none" style="color:var(--first-color)">More details<i class="bi bi-caret-right-fill m-auto"></i></a>
+                  
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <footer class="container-fluid row bg-dark py-2 mx-auto">
+        <nav class="col-12 row justify-content-center mt-1">
+            <div class="col-2 d-flex justify-content-center">
+                <a class="fit-content" href="https://api.whatsapp.com/send?phone=543813348703" target="_blank">
+                    <i class="fs-5 bi bi-whatsapp"></i>
+                </a>
+            </div>
+            <div class="col-2 d-flex justify-content-center">
+                <a class="fit-content" href="https://github.com/PIPEYOLO" target="_blank">
+                    <i class="fs-5 bi bi-github"></i>
+                </a>
+            </div>
+            <div class="col-2 d-flex justify-content-center">
+                <a class="fit-content" href="https://instagram.com/felipetorresi_mt" target="_blank">
+                    <i class="fs-5 bi bi-instagram"></i>
+                </a>
+            </div>
+            <div class="col-2 d-flex justify-content-center">
+                <a class="fit-content" href="https://www.youtube.com/@pipeyolohello708" target="_blank">
+                    <i class="fs-5 bi bi-youtube"></i>
+                </a>
+            </div>
+        </nav>
+
+        <div class="col-12 fc-light f h-50 text-center mt-2" style="font-size: small;">
+            <small>© CopyNot - Felipe Torresi - Just Practising</small>
+        </div>
+    </footer>
+
+    <!--Boostrap Popper Script-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <!--My Scripts-->
+    <script src="/public/sites/main.js"></script>
+    <script src="/public/common-resources/main.js"></script>
+  </body>
+</html>
