@@ -1,11 +1,13 @@
+import {manageServiceRequest} from "./manageServiceRequest.js";
 
-const a = "asd";
 
 
 
 
 export default {
-    a
+    manageServiceRequest,
+
+
 }
 
 

@@ -69,6 +69,11 @@ select option {
     background-color: var(--second-color) !important;
 }
 
+.bg-semidark{
+    background-color: var(--second-alpha-color) !important;
+}
+
+
 .bg-light{
     background-color: var(--first-color) !important;
 }
@@ -91,6 +96,16 @@ select option {
 .c-white{
     color: white !important;
 }
+.c-gray {
+    color: #ccc !important;
+}
+
+.c-dark-gray{
+    color: #888 !important;
+}
+
+
+
 .fc-light{
     color: white !important;
 }

@@ -15,8 +15,15 @@ const app = express();
 
 // const router = express.Router()
 // console.log(utilities.PUBLIC_FOLDER_REL)
+app.set("views", utilities.VIEWS_FOLDER)
+app.set("view engine", "ejs")
 app.use((req, res, next)=>{
-    console.log("Content-Legnth", req.get("Content-Length")); next();
+    req.path_ = req.path;
+    // console.log(req.path)
+    // console.log(req.headers);
+    // console.log("Content-Legnth", req.get("Content-Length")); 
+    next();
+
 })
 app.use(utilities.PUBLIC_FOLDER_REL, Routers.staticRouter);
 app.use(express.json({limit:100000}));
@@ -24,7 +31,8 @@ app.use("/home", Routers.homeRouter);
 app.use("/sites", Routers.sitesRouter);
 app.use("/clients", Routers.clientsRouter);
 app.use("/start-now", Routers.startNowRouter);
-
+app.use("/intrested", Routers.intrestedRouter);
+app.use("/request-service", Routers.requestService);
 
 
 

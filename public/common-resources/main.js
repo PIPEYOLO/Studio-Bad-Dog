@@ -1,3 +1,6 @@
+
+
+
 // document.write("el pep")
 let mq_lg = matchMedia("min-width: 992px");
 
@@ -74,7 +77,6 @@ function parseAndReturnElement(htmlString, selector) {
 }
 
 
-
 //-----------------------------------------------------------------------------------------------------
 // Modal Parser:
 const modalDialog_MODEL = parseAndReturnElement(`
@@ -107,6 +109,65 @@ function ModalConstructor({id, title, paragraph}){
     return modal;
 
 }
+
+
+
+//-----------------------------------------------------------------------------------------
+function manageFetch({url, method="GET", headers={"Content-Type" : "application/json"},body}){
+  let status;
+  let statusText;
+  console.log("asd")
+  let returnPromise = new Promise((resolve, reject) => {
+    fetch(url, {
+      method,
+      headers,
+      body : JSON.stringify(body)
+    })
+    .then(res=>{
+      console.log("b")
+      status = res.status;
+      statusText = res.statusText;
+      // console.log(res.headers);
+      // console.log(Array.from(res.headers));
+      if(res.headers.get("Content-Type") == "application/json; charset=utf-8"){
+        console.log("c")
+        res.json().then(res=>{
+
+          console.log(res)
+          if(status < 200){
+      
+          }
+          else if(status < 300){
+            resolve(res);
+          }
+          else if(status < 400){
+            location.assign(`${origin}${res.redirectionInfo}`);
+          }
+          else{
+            reject(res);
+          }
+          console.log(res);
+        })
+
+      }
+      else{
+        return;
+      };
+    })
+   
+    .catch(info=>{
+      reject(info);
+      console.log(info);
+    })
+  })
+  
+
+  return returnPromise;
+
+
+
+}
+
 
 
 
