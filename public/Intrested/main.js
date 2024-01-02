@@ -11,12 +11,19 @@ send_form.addEventListener("click", ev=>{
     const formData = new FormData(form);
     const formInfo = {};
 
-    formData.forEach((value, key) => {
+
+    for(let e of formData.entries()){
+        let value = e[1];
+        let key = e[0];
+        console.log(key, value)
+        if(!validateField(key=="comments" ? "a" : value, key== "email" ? true : false)){
+            return document.getElementById(key).focus();
+
+
+        };
         formInfo[key] = value;
         console.log(key, value);
-    });
-
-console.log(location);
+    }
     
 
     manageFetch({
@@ -46,3 +53,15 @@ console.log(location);
 
 
 })
+
+
+
+function validateField(str, isEmail){
+    if(typeof str != "string" || str.length == 0){
+        return false;
+    };
+    if(isEmail && !str.includes("@")){
+        return false;
+    }
+    return true;
+}
