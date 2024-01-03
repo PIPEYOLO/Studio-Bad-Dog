@@ -1,4 +1,5 @@
 node_modules
 package-lock.json
-google_OAuth.json
+google_OAuth_Credentials.json
+account_transport.json
 notes.txt

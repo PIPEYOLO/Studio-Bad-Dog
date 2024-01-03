@@ -5,7 +5,7 @@ import http from "http";
 import process from "process";
 import Model from "./model/mainModel.js";
 import Routers from "./routes/routes.js";
-import utilities from "./utilities.js";
+import * as utilities from "./utilities.js";
 import path from "path";
 // console.log(dotenv);
 // config();

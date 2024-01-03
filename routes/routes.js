@@ -2,7 +2,7 @@ import express from "express";
 // import dotenv from "dotenv";
 import fs from "node:fs";
 import path from "path";
-import utilities from "../utilities.js";
+import * as utilities from "../utilities.js";
 import Model from "../model/mainModel.js";
 
 console.log(Model)

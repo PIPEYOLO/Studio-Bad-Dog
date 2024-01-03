@@ -8,33 +8,41 @@ import fs from "node:fs";
 
 
 
-const PROYECT_DIR = url.fileURLToPath(new URL('.', import.meta.url)); 
+export const PROYECT_DIR = url.fileURLToPath(new URL('.', import.meta.url)); 
 console.log(dotenv.config({path : path.join(PROYECT_DIR, "./.env")}));
 
-const VIEWS_FOLDER = path.join(PROYECT_DIR, process.env.VIEWS_DIR_PATH);
-const PUBLIC_FOLDER = path.join(PROYECT_DIR, process.env.PUBLIC_DIR_PATH);
-const PUBLIC_FOLDER_REL = process.env.PUBLIC_DIR_PATH;
+export const VIEWS_FOLDER = path.join(PROYECT_DIR, process.env.VIEWS_DIR_PATH);
+export const PUBLIC_FOLDER = path.join(PROYECT_DIR, process.env.PUBLIC_DIR_PATH);
+export const PUBLIC_FOLDER_REL = process.env.PUBLIC_DIR_PATH;
 
-const ADMIN_EMAIL = process.env.ADMIN_EMAIL;
-const ADMIN_EMAIL_ID = ADMIN_EMAIL.slice(0, ADMIN_EMAIL.indexOf("@"));
-// const GMAIL_API_KEY = process.env.GMAIL_API_KEY;
-// const GOOGLE_OAUTH = JSON.parse(process.env.GOOGLE_OAUTH);
+export const ADMIN_EMAIL = process.env.ADMIN_EMAIL;
+export const ADMIN_EMAIL_ID = ADMIN_EMAIL.slice(0, ADMIN_EMAIL.indexOf("@"));
+export const GOOGLE_OAUTH = JSON.parse(
+    fs.readFileSync(
+        path.join(PROYECT_DIR, process.env.GOOGLE_AUTH_FILE_PATH)
+    )
+).web;
+export const GOOGLE_ACCOUNT_TRANSPORT = JSON.parse(
+    fs.readFileSync(
+        path.join(PROYECT_DIR, process.env.GOOGLE_ACCOUNT_TRANSPORT_FILE_PATH)
+    )
+);
 
 // console.log(VIEWS_FOLDER);
 
 
 
 
-export default {
-    // get__dirname,
-    // get__fileName,
-    PROYECT_DIR,
-    VIEWS_FOLDER,
-    PUBLIC_FOLDER,
-    PUBLIC_FOLDER_REL,
-    ADMIN_EMAIL,
-    ADMIN_EMAIL_ID,
-    // GMAIL_API_KEY,
-    // GOOGLE_OAUTH
+// export default {
+//     // get__dirname,
+//     // get__fileName,
+//     PROYECT_DIR,
+//     VIEWS_FOLDER,
+//     PUBLIC_FOLDER,
+//     PUBLIC_FOLDER_REL,
+//     ADMIN_EMAIL,
+//     ADMIN_EMAIL_ID,
+//     // GMAIL_API_KEY,
+//     // GOOGLE_OAUTH
     
-}
+// }
