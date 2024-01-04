@@ -89,7 +89,7 @@
     <main class="vh-100 d-flex justify-content-center align-items-center">
         <section class="d-flex flex-column flex-wrap">
             <h2>Thanks for contacting us <b><%= name %></b> !</h2>
-            <% if(successfulRequest == "true") { %>    
+            <% if(successfulRequest == true) { %>    
                 <p>We have successfully received your service request.</p>
                 <p>As soon as possible, you will receve an email at "<i class="fw-bold"><%= email %></i>" to set an <b>appointment</b>!</p>
             <% } else {%>

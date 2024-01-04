@@ -3,7 +3,7 @@ import express from "express";
 import http from "http";
 // import dotenv from "dotenv";
 import process from "process";
-import Model from "./model/mainModel.js";
+
 import Routers from "./routes/routes.js";
 import * as utilities from "./utilities.js";
 import path from "path";
@@ -46,4 +46,4 @@ server.listen(PORT, ()=>{
     console.log(`Server is running on port ${PORT}`);
 })
 
-
+// http.createServer(()=>{}).listen(3001, console.log("runing on ", 3001));

@@ -96,6 +96,13 @@ const modalDialog_MODEL = parseAndReturnElement(`
     </div>
   </div>`
   ,".modal-dialog" );
+const spinner_MODEL = parseAndReturnElement(`
+  <div class="spinner-border position-absolute top-50 start-50 translate-middle" role="status" style="z-index:1000">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+`, ".spinner-border"
+)
+
 function ModalConstructor({id, title, paragraph}){
     const modal = modalDialog_MODEL.cloneNode(true);
     modal.classList.add("position-absolute", "start-50", "right-50", "translate-middle", "z-3");
@@ -113,10 +120,15 @@ function ModalConstructor({id, title, paragraph}){
 
 
 //-----------------------------------------------------------------------------------------
-function manageFetch({url, method="GET", headers={"Content-Type" : "application/json"},body}){
+function manageFetch({url, method="GET", headers={"Content-Type" : "application/json"},body, willRedirect}){
   let status;
   let statusText;
   console.log("asd")
+  let spinner;
+  if(willRedirect) {
+    spinner = spinner_MODEL.cloneNode(true);
+    document.body.appendChild(spinner);
+  }
   let returnPromise = new Promise((resolve, reject) => {
     fetch(url, {
       method,
@@ -141,6 +153,7 @@ function manageFetch({url, method="GET", headers={"Content-Type" : "application/
             resolve(res);
           }
           else if(status < 400){
+            spinner.remove();
             location.assign(`${origin}${res.redirectionInfo}`);
           }
           else{

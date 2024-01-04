@@ -16,7 +16,7 @@ send_form.addEventListener("click", ev=>{
         let value = e[1];
         let key = e[0];
         console.log(key, value)
-        if(!validateField(key=="comments" ? "a" : value, key== "email" ? true : false)){
+        if(!validateField(key=="comment" ? "a" : value, key== "email" ? true : false)){
             return document.getElementById(key).focus();
 
 
@@ -32,7 +32,8 @@ send_form.addEventListener("click", ev=>{
         headers: {
         "Content-Type" : "application/json"
         },
-        body: formInfo
+        body: formInfo,
+        willRedirect : true
     })
 
     // fetch(`${origin}${"/request-service"}`, {

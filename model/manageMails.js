@@ -54,12 +54,14 @@ const updateAccessToken = async () => {
 
 }
 
-updateAccessToken();
+updateAccessToken().then(res=>{
+    console.log("Actalizado: ", GOOGLE_ACCOUNT_TRANSPORT);
+});
 setInterval(updateAccessToken, 3500000);
 
 // console.log(url);
-const sendMail_gmail = async ({from, to, subject, text})=> {
-    console.log(GOOGLE_ACCOUNT_TRANSPORT);
+export const sendMail_gmail = async ({from, to, subject, text})=> {
+    // console.log(GOOGLE_ACCOUNT_TRANSPORT);
     const transport = nodemailer.createTransport(GOOGLE_ACCOUNT_TRANSPORT);
 
     const mailOptions = {
@@ -70,60 +72,16 @@ const sendMail_gmail = async ({from, to, subject, text})=> {
     }
 
     const result = await transport.sendMail(mailOptions);
-    return result;
-
-};
-
-
-
-
-
-const validateUserInput = ({name, email, comment = ""}) => {
-    console.log(name)
-    if(typeof name != "string" || typeof email != "string" || name.length == 0 || email.length == 0 || !email.includes("@")){
+    if(result.accepted[0] == to){
+        return {
+            success : true
+        }
+    }
+    else {
         return {
             success : false,
-            info : "Invalid user or email"
-        };
-    };
-
-    return {
-        success : true
-    };
-
-}
-
-
-
-// // const getProfile_gmail = async (id) => {
-// //     fetch(`https://gmail.googleapis.com/gmail/v1/users/${id}/profile?key=${utilities.GOOGLE_OAUTH.web.client_id}`, {method : "GET"})
-// //     .then(res=>{
-// //         console.log(res);
-// //         return res.json()
-// //     })
-// //     .then(res=>{
-// //         console.log(res);
-// //     })
-// //     .catch(err=>{
-// //         console.log(err);
-// //     })
-
-// // }
-
-// getProfile_gmail(utilities.ADMIN_EMAIL_ID);
-
-export const manageServiceRequest = async ({name, email, comment})=>{
-    let inputValidation = validateUserInput({name, email, comment});
-    console.log(inputValidation)
-    if(!inputValidation.success){
-        return inputValidation;
-    }
-    // enviar email
-
-    return {
-        success : true
+            reason :"User did not receive the email"
+        }
     }
 
-
-}
-
+};

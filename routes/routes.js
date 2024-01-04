@@ -3,12 +3,12 @@ import express from "express";
 import fs from "node:fs";
 import path from "path";
 import * as utilities from "../utilities.js";
-import Model from "../model/mainModel.js";
+import * as model from "../model/mainModel.js";
 
-console.log(Model)
+// console.log(Model)
 // dotenv.config();
 
-console.log(utilities)
+// console.log(utilities)
 // console.log(utilities.get__fileName());
 
 const staticRouter = express.static(utilities.PUBLIC_FOLDER);
@@ -62,7 +62,7 @@ requestService.get("/", (req, res)=>{
     const data = {
         name : req.query.name ?? "",
         email : req.query.email ?? "",
-        successfulRequest : req.query.successfulRequest ?? false,
+        successfulRequest : req.query.successfulRequest == "true" ? true : false,
         reason : req.query.reason
     };
 
@@ -79,7 +79,7 @@ requestService.post("/", async (req, res)=>{
     let successfulRequest, reason;
     let managementInfo; 
     try{
-        managementInfo = await Model.manageServiceRequest({name, email, comment});
+        managementInfo = await model.manageServiceRequest({name, email, comment});
         successfulRequest = managementInfo.success;
         reason = managementInfo.info;
     }
